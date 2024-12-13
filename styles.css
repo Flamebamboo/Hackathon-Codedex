@@ -57,6 +57,44 @@ body {
   width: 100%;
 }
 
+.internet-explorer-content {
+  height: 70vh;
+  overflow-y: scroll;
+  background: #fff;
+  border: 2px inset #dfdfdf;
+  padding: 2px;
+}
+
+.internet-explorer-content::-webkit-scrollbar {
+  width: 16px;
+  background: #c0c0c0;
+}
+
+.internet-explorer-content::-webkit-scrollbar-track {
+  background: #c0c0c0;
+}
+
+.internet-explorer-content::-webkit-scrollbar-thumb {
+  background: #dfdfdf;
+  border: 1px solid #808080;
+  border-right-color: #404040;
+  border-bottom-color: #404040;
+}
+
+#css-page {
+  min-height: 100vh;
+  color: #000;
+  margin: 20px;
+  padding: 40px;
+  background-color: #ffffff;
+}
+
+#css-page p {
+  color: #000;
+  text-align: left;
+  margin: 0;
+}
+
 .internet-explorer-container {
   background: #000080;
   padding: 3px;
