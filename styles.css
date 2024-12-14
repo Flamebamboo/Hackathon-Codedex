@@ -336,6 +336,13 @@ body {
   color: rgb(0, 0, 0);
   position: relative;
 }
+audio {
+  display: none;
+  position: fixed;
+  bottom: 10px;
+  left: 10px;
+  z-index: 10000;
+}
 
 .splash-content h2 {
   font-size: 4rem;

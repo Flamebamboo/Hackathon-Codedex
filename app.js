@@ -60,6 +60,7 @@ document.addEventListener("DOMContentLoaded", makeDraggable);
 document.addEventListener("DOMContentLoaded", () => {
   const splash = document.getElementById("splashScreen");
   const mainContent = document.getElementById("windowOS");
+  const audio = document.getElementById("startup");
 
   mainContent.style.display = "none";
 
@@ -70,10 +71,13 @@ document.addEventListener("DOMContentLoaded", () => {
     setTimeout(() => {
       splash.style.display = "none";
       mainContent.style.display = "block";
+
+      audio.play().catch((error) => {
+        console.log("Audio playback failed:", error);
+      });
     }, 500);
   }, 3000);
 });
-
 function toggleSelectors() {
   const demo = document.getElementById("selector-demo");
   demo.classList.toggle("highlight");
