@@ -16,15 +16,21 @@
             <button aria-label="Close"></button>
           </div>
         </div>
-        <div class="internet-explorer-content">
-          <div id="browser-address">
-            <h5>Address</h5>
-            <div class="input-container">
-              <h5>http://www.css.com/</h5>
-            </div>
+        <div id="browser-address">
+          <h5>Address</h5>
+          <div class="input-container">
+            <h5>http://www.css.com/</h5>
           </div>
+        </div>
 
+        <div class="internet-explorer-content">
           <div id="css-page">
+            <nav class="css-nav">
+              <ul>
+                <li><a href="#css" style="color: blue">CSS</a></li>
+                <li><a href="#tutorial" style="color: blue">Tutorial</a></li>
+              </ul>
+            </nav>
             <h2>CSS Documentation (1994)</h2>
             <p>
               Cascading Style Sheets (CSS) is a stylesheet language used to
@@ -40,6 +46,28 @@
               separation made web development more accessible and allowed web
               pages to adapt more easily to different devices.
             </p>
+            <h3>How to use?</h3>
+            <div class="code-block">
+              <pre>
+                <code>
+                  &lt;style&gt;
+                    h1 {
+                      font-size: 30px;
+                      margin: 20px;
+                    }
+                  &lt;/style&gt;
+                </code>
+              </pre>
+            </div>
+            <p>
+              The code above shows a simple CSS style that changes the font size
+              and apply some margin!
+            </p>
+
+            <div>
+              <div id="box-sample"><h1>Testing</h1></div>
+              <button id="button" onclick="applyStyle()">Apply Style</button>
+            </div>
           </div>
         </div>
         <div class="internet-explorer-footer">
@@ -51,6 +79,8 @@
         <div>4:20 PM</div>
       </div>
     </div>
+
+    <script src="app.js"></script>
   </body>
 </html>
 
