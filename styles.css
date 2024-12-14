@@ -308,21 +308,84 @@ body {
   border-right: 1px solid #fff;
   border-bottom: 1px solid #fff;
 }
-
 .splash-screen {
   position: fixed;
   top: 0;
   left: 0;
   width: 100vw;
   height: 100vh;
-  background-image: url("/Images/splashscreenwin95.png");
+  background-image: url(Images/Windows\ 95\ Clouds.webp);
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
   z-index: 9999;
+  font-family: "Cinzel", serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
 }
 
 .splash-content {
-  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  text-align: left;
+  padding: 50px;
   color: rgb(0, 0, 0);
+  position: relative;
+}
+
+.splash-content h2 {
+  font-size: 4rem;
+  font-weight: normal;
+  color: #fff;
+  margin: 0;
+  letter-spacing: 1px;
+  transform: translate(-25%, 65%);
+}
+
+.splash-image {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+.splash-image img {
+  width: 30%;
+  height: auto;
+}
+
+.splash-content h1 {
+  font-size: 5rem;
+  font-weight: bold;
+  color: #000;
+  margin: 0;
+  letter-spacing: 2px;
+}
+
+.splash-content span {
+  font-size: 6rem;
+  font-weight: bold;
+  color: #fff;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+.highlight {
+  background-color: yellow;
+  padding: 5px;
+}
+
+#special {
+  border: 2px solid blue;
+  padding: 5px;
+  margin: 10px 0;
+}
+
+.example-box {
+  background: #f0f0f0;
+  border: 1px solid #808080;
+  padding: 10px;
+  margin: 10px 0;
 }

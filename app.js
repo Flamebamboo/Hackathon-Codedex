@@ -73,3 +73,8 @@ document.addEventListener("DOMContentLoaded", () => {
     }, 500);
   }, 3000);
 });
+
+function toggleSelectors() {
+  const demo = document.getElementById("selector-demo");
+  demo.classList.toggle("highlight");
+}
