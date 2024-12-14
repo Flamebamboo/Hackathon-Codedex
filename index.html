@@ -11,9 +11,9 @@
         <div class="internet-explorer-container">
           <div class="titleBar-text-blue">Internet Explorer.exe</div>
           <div class="windows-buttons-container">
-            <button aria-label="Minimize"></button>
-            <button aria-label="Maximize"></button>
-            <button aria-label="Close"></button>
+            <button onclick="triggerError()"></button>
+            <button onclick="triggerError()"></button>
+            <button onclick="triggerError()"></button>
           </div>
         </div>
         <div id="browser-address">
@@ -106,6 +106,16 @@
           ><span>Start</span>
         </button>
         <div><h5>5:30 am</h5></div>
+      </div>
+    </div>
+    <div id="windowsError" class="windows-error">
+      <div class="windows-error-modal">
+        <div class="windows-error-header">
+          <h1>System Message</h1>
+          <button class="cancel-button" onclick="dismissError()">X</button>
+        </div>
+        <p>Critical Error</p>
+        <button class="ok-button" onclick="dismissError()">OK</button>
       </div>
     </div>
 

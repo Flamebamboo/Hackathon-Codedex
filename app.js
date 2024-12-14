@@ -9,3 +9,15 @@ const applyStyle = () => {
     button.textContent = "Apply Style";
   }
 };
+
+// get modal windows error element
+
+const triggerError = () => {
+  const windowsError = document.getElementById("windowsError");
+  windowsError.style.display = "flex";
+};
+
+const dismissError = () => {
+  const windowsError = document.getElementById("windowsError");
+  windowsError.style.display = "none";
+};
