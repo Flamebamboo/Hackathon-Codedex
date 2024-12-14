@@ -15,8 +15,15 @@ const applyStyle = () => {
 const triggerError = () => {
   const windowsError = document.getElementById("windowsError");
   windowsError.style.display = "flex";
+  const errorsound = document.getElementById("errorsound");
+  errorsound.play().catch((error) => {
+    console.log("Audio playback failed:", error);
+  });
 };
 
+const refreshPage = () => {
+  location.reload();
+};
 const dismissError = () => {
   const windowsError = document.getElementById("windowsError");
   windowsError.style.display = "none";

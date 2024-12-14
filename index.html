@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>CSS Level 1 Documentation (1994)</title>
+    <title>Windows 95 CSS Documentation (1994)</title>
     <link rel="stylesheet" href="styles.css" />
 
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -148,7 +148,7 @@
         </div>
       </div>
       <div class="windows95-taskbar-bottom">
-        <button class="start">
+        <button onclick="refreshPage()" class="start">
           <svg
             xmlns="http://www.w3.org/2000/svg"
             viewBox="0 -0.5 72 72"
@@ -203,8 +203,12 @@
         <h1>Windows <span>95</span></h1>
       </div>
     </div>
-    <audio id="startup" class="audio" controls>
+    <audio autoplay id="startup" class="audio">
       <source src="/Audio/Windows XP Startup Sound.mp3" type="audio/mpeg" />
+      Your browser does not support the audio element.
+    </audio>
+    <audio id="errorsound" class="audio">
+      <source src="/Audio/Windows XP Error Sound.mp3" type="audio/mpeg" />
       Your browser does not support the audio element.
     </audio>
 
