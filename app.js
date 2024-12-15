@@ -21,6 +21,116 @@ const triggerError = () => {
   });
 };
 
+const triggerSoundsVirus = () => {
+  const virus = document.getElementById("windowsSoundsVirus");
+
+  updateProgressBar();
+  virus.style.display = "flex"; //display the virus modal in flex cuz we use flexbox props in css as well
+};
+
+const closeSoundsVirus = () => {
+  const virus = document.getElementById("windowsSoundsVirus");
+  virus.style.display = "none";
+};
+
+function updateProgressBar() {
+  let progressBar = document.getElementById("progress");
+  let width = 0;
+  let interval = setInterval(function () {
+    if (width >= 100) {
+      closeSoundsVirus();
+      clearInterval(interval);
+      applySoundsVirus();
+    } else {
+      width++;
+      progressBar.style.width = width + "%";
+    }
+  }, 100);
+}
+
+function applySoundsVirus() {
+  const randomDuration = Math.floor(Math.random() * 8000);
+  setInterval(() => {
+    virusMemeSounds();
+  }, randomDuration);
+}
+
+function virusMemeSounds() {
+  const memeSound = [
+    "Audio/ChillGuy.mp3",
+    "Audio/Goofy.mp3",
+    "Audio/Polar.mp3",
+    "Audio/Virus1.mp3",
+    "Audio/Virus2.mp3",
+  ];
+
+  const randomSound = Math.floor(Math.random() * memeSound.length);
+  const selectedSound = memeSound[randomSound];
+  const audio = new Audio(selectedSound);
+  audio.play();
+}
+
+//ads
+function applyAdware() {
+  const adware = document.getElementById("windowsAdwareVirus");
+  adware.style.display = "flex";
+  adwareProgress();
+}
+
+function closeAdware() {
+  const adware = document.getElementById("windowsAdwareVirus");
+  adware.style.display = "none";
+  triggerAds();
+}
+
+function triggerAds() {
+  setInterval(() => {
+    createAds();
+  }, 50);
+}
+
+function createAds() {
+  const ad = document.createElement("div");
+  ad.className = "fake-ad";
+
+  //fuckkkkkkkkkk why is it not working
+  ad.style.top = `${Math.random() * 80}vh`;
+  ad.style.left = `${Math.random() * 80}vw`;
+
+  const closeButton = document.createElement("button");
+  closeButton.textContent = "X";
+  closeButton.className = "close-ad";
+  closeButton.onclick = () => {
+    document.body.removeChild(ad);
+  };
+
+  ad.appendChild(closeButton);
+  ad.appendChild(document.createTextNode("Buy Codedex Now!"));
+  document.body.appendChild(ad);
+}
+
+function adwareProgress() {
+  let progressBar = document.getElementById("progressAdware");
+  let width = 0;
+  let intervalSpeed = 200;
+
+  //need to change the speed of the progress bar
+  function updateProgress() {
+    if (width >= 100) {
+      closeAdware();
+    } else {
+      if (width === 30) {
+        intervalSpeed = 15;
+      }
+      width++;
+      progressBar.style.width = width + "%";
+      setTimeout(updateProgress, intervalSpeed);
+    }
+  }
+
+  updateProgress();
+}
+
 const refreshPage = () => {
   location.reload();
 };

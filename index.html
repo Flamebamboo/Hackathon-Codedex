@@ -15,10 +15,29 @@
     <div class="scanlines-effect"></div>
     <div id="windowOS">
       <div class="app-container">
-        <button onclick="triggerVirus()">
-          <img src="Images/Virus.png" alt="Windows 95" class="windows95" />
+        <button onclick="applyAdware()">
+          <img
+            class="virus"
+            src="Images/Virus.png"
+            alt="Windows 95"
+            class="windows95"
+          />
         </button>
         <h6>NotSonny.exe</h6>
+        <button onclick="triggerSoundsVirus()">
+          <img
+            class="virus"
+            src="Images/Virus2.png"
+            alt="Windows 95"
+            class="windows95"
+          />
+        </button>
+        <h6>e.r.i.c.exe</h6>
+      </div>
+      <div id="special-notes">
+        <button onclick="openNotes()">
+          <img src="Images/notes1.png" alt="notes" />
+        </button>
       </div>
       <div id="internet-explorer">
         <div class="internet-explorer-container">
@@ -40,11 +59,12 @@
           <div id="css-page">
             <nav class="css-nav">
               <ul>
-                <li><a href="#css" style="color: blue">CSS</a></li>
-                <li><a href="#part-1" style="color: blue">Tutorial</a></li>
+                <li><a href="#css" style="color: blue">Overview</a></li>
+                <li><a href="#part-1" style="color: blue">Part 1</a></li>
+                <li><a href="#part-2" style="color: blue">Part 2</a></li>
               </ul>
             </nav>
-            <h2>CSS Documentation (1994)</h2>
+            <h2 id="css">CSS Documentation (1994)</h2>
             <p>
               Cascading Style Sheets (CSS) is a stylesheet language used to
               describe the presentation of a document written in HTML or XML
@@ -59,7 +79,7 @@
               separation made web development more accessible and allowed web
               pages to adapt more easily to different devices.
             </p>
-            <h3>Part 1 Basic Styling</h3>
+            <h3 id="part-1">Part 1 Basic Styling</h3>
             <div class="code-block">
               <pre>
                 <code>
@@ -80,7 +100,7 @@
             <div id="box-sample"><h1>My font size changes!</h1></div>
             <button id="button" onclick="applyStyle()">Apply Style</button>
 
-            <h3>Part 2 Selectors</h3>
+            <h3 id="part-2">Part 2 Selectors</h3>
             <p>
               CSS has different ways to select HTML elements. Here are the three
               main types of selectors:
@@ -198,6 +218,33 @@
       </div>
     </div>
 
+    /* virus popup modal */
+    <div id="windowsAdwareVirus" class="windows-error">
+      /* for Sonny */
+      <div class="windows-error-modal">
+        <div class="windows-error-header">
+          <h1>Installing Adware</h1>
+        </div>
+        <p>Warning: Ads Will Distrupt Your Learning</p>
+        <div class="progress-bar">
+          <div class="progress" id="progressAdware"></div>
+        </div>
+      </div>
+    </div>
+
+    <div id="windowsSoundsVirus" class="windows-error">
+      /* for Eric */
+      <div class="windows-error-modal">
+        <div class="windows-error-header">
+          <h1>Installing Something From 2024</h1>
+        </div>
+        <p>ALERT: Watch out for your volume!</p>
+        <div class="progress-bar">
+          <div class="progress" id="progress"></div>
+        </div>
+      </div>
+    </div>
+
     <div id="splashScreen" class="splash-screen">
       <div class="splash-image">
         <img src="Images/windows-logo.png" alt="Windows 95" />
@@ -207,14 +254,14 @@
         <h1>Windows <span>95</span></h1>
       </div>
     </div>
-    <audio autoplay id="startup" class="audio">
+    <!-- <audio autoplay id="startup" class="audio">
       <source src="Audio/Windows XP Startup Sound.mp3" type="audio/mpeg" />
       Your browser does not support the audio element.
     </audio>
     <audio id="errorsound" class="audio">
       <source src="Audio/Windows XP Error Sound.mp3" type="audio/mpeg" />
       Your browser does not support the audio element.
-    </audio>
+    </audio> -->
 
     <script src="app.js"></script>
   </body>
