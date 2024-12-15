@@ -140,35 +140,37 @@ const dismissError = () => {
 };
 
 function makeDraggable() {
-  const ieWindow = document.getElementById("internet-explorer");
-  const header = document.querySelector(".internet-explorer-container");
-  let isDragging = false;
-  let currentX;
-  let currentY;
-  let initialX;
-  let initialY;
+  const ieWindows = document.querySelectorAll(".internet-explorer");
+  ieWindows.forEach((ieWindow) => {
+    const header = ieWindow.querySelector(".internet-explorer-container");
+    let isDragging = false;
+    let currentX;
+    let currentY;
+    let initialX;
+    let initialY;
 
-  header.style.cursor = "move";
+    header.style.cursor = "move";
 
-  header.addEventListener("mousedown", (e) => {
-    isDragging = true;
-    initialX = e.clientX - ieWindow.offsetLeft;
-    initialY = e.clientY - ieWindow.offsetTop;
-  });
+    header.addEventListener("mousedown", (e) => {
+      isDragging = true;
+      initialX = e.clientX - ieWindow.offsetLeft;
+      initialY = e.clientY - ieWindow.offsetTop;
+    });
 
-  document.addEventListener("mousemove", (e) => {
-    if (!isDragging) return;
+    document.addEventListener("mousemove", (e) => {
+      if (!isDragging) return;
 
-    e.preventDefault();
-    currentX = e.clientX - initialX;
-    currentY = e.clientY - initialY;
+      e.preventDefault();
+      currentX = e.clientX - initialX;
+      currentY = e.clientY - initialY;
 
-    ieWindow.style.left = `${currentX}px`;
-    ieWindow.style.top = `${currentY}px`;
-  });
+      ieWindow.style.left = `${currentX}px`;
+      ieWindow.style.top = `${currentY}px`;
+    });
 
-  document.addEventListener("mouseup", () => {
-    isDragging = false;
+    document.addEventListener("mouseup", () => {
+      isDragging = false;
+    });
   });
 }
 
@@ -217,3 +219,17 @@ function getRealTime() {
 setInterval(getRealTime, 60000);
 
 getRealTime();
+
+const openNotes = () => {
+  const internetExplorerNotes = document.getElementById(
+    "internetExplorerNotes"
+  );
+  internetExplorerNotes.style.display = "block";
+};
+
+function closeNotes() {
+  const internetExplorerNotes = document.getElementById(
+    "internetExplorerNotes"
+  );
+  internetExplorerNotes.style.display = "none";
+}

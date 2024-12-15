@@ -16,30 +16,16 @@
     <div id="windowOS">
       <div class="app-container">
         <button onclick="applyAdware()">
-          <img
-            class="virus"
-            src="Images/Virus.png"
-            alt="Windows 95"
-            class="windows95"
-          />
+          <img src="Images/Virus.png" alt="Windows 95" class="windows95" />
         </button>
         <h6>NotSonny.exe</h6>
         <button onclick="triggerSoundsVirus()">
-          <img
-            class="virus"
-            src="Images/Virus2.png"
-            alt="Windows 95"
-            class="windows95"
-          />
+          <img src="Images/Virus2.png" alt="Windows 95" class="windows95" />
         </button>
         <h6>e.r.i.c.exe</h6>
       </div>
-      <div id="special-notes">
-        <button onclick="openNotes()">
-          <img src="Images/notes1.png" alt="notes" />
-        </button>
-      </div>
-      <div id="internet-explorer">
+
+      <div id="internet-explorer" class="internet-explorer">
         <div class="internet-explorer-container">
           <div class="titleBar-text-blue">Internet Explorer.exe</div>
           <div class="windows-buttons-container">
@@ -48,7 +34,7 @@
             <button class="win-button" onclick="triggerError()"></button>
           </div>
         </div>
-        <div id="browser-address">
+        <div id="browser-address" class="browser-address">
           <h5>Address</h5>
           <div class="input-container">
             <h5>http://www.css.com/</h5>
@@ -173,6 +159,11 @@
           <p>Copyright © 1994 W3C - All rights reserved</p>
         </div>
       </div>
+      <div id="special-notes">
+        <button onclick="openNotes()">
+          <img src="Images/notes1.png" alt="notes" />
+        </button>
+      </div>
       <div class="windows95-taskbar-bottom">
         <button onclick="refreshPage()" class="start">
           <svg
@@ -218,7 +209,7 @@
       </div>
     </div>
 
-    /* virus popup modal */
+    <!--  virus popup modal  -->
     <div id="windowsAdwareVirus" class="windows-error">
       /* for Sonny */
       <div class="windows-error-modal">
@@ -254,14 +245,64 @@
         <h1>Windows <span>95</span></h1>
       </div>
     </div>
-    <!-- <audio autoplay id="startup" class="audio">
+
+    <!-- internet explorer clone on active when openNotes is executed -->
+
+    <div
+      id="internetExplorerNotes"
+      class="internet-explorer"
+      style="display: none"
+    >
+      <div class="internet-explorer-container">
+        <div class="titleBar-text-blue">Internet Explorer.exe</div>
+        <div class="windows-buttons-container">
+          <button class="win-button" onclick="closeNotes()"></button>
+          <button class="win-button" onclick="closeNotes()"></button>
+          <button class="win-button" onclick="closeNotes()"></button>
+        </div>
+      </div>
+      <div class="mail-header">
+        <h5>From</h5>
+        <div class="mail-input">
+          <h5>FlameBamboo</h5>
+        </div>
+        <h5>To</h5>
+        <div class="mail-input">
+          <h5>Codedex</h5>
+        </div>
+        <h5>Subject</h5>
+        <div class="mail-input">
+          <h5>Thank you Codedex</h5>
+        </div>
+      </div>
+      <div class="internet-explorer-content">
+        <div id="notes-page">
+          <h1>Thank You Codedex Team!</h1>
+          <h4>
+            This hackathon was my first experience! i dont think i've felt this
+            kind of experience for a coding project building a website up to my
+            expectations in 2 days!? Dayuummm its a great experience! I hope i
+            can join more in the future and maybe some IRL hackathon events in
+            my country! Thank you for the opportunity!
+          </h4>
+          <h5>Best Regards! FlameBamboo</h5>
+        </div>
+        <div>
+          <h1>why you scroll here?</h1>
+          <p>There's nothing here</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- audio can be played directly from js but im lazy to do that for this since i already put here -->
+    <audio autoplay id="startup" class="audio">
       <source src="Audio/Windows XP Startup Sound.mp3" type="audio/mpeg" />
       Your browser does not support the audio element.
     </audio>
     <audio id="errorsound" class="audio">
       <source src="Audio/Windows XP Error Sound.mp3" type="audio/mpeg" />
       Your browser does not support the audio element.
-    </audio> -->
+    </audio>
 
     <script src="app.js"></script>
   </body>

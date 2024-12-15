@@ -204,7 +204,30 @@ body {
 .app-container button:hover img {
   filter: brightness(1.2);
 }
-#internet-explorer {
+
+#special-notes {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100vw;
+  height: 100vh;
+  text-align: center;
+}
+
+#special-notes img {
+  width: 64px;
+  height: 64px;
+}
+
+#special-notes button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+}
+
+.internet-explorer {
   position: absolute;
   top: 45%;
   left: 50%;
@@ -218,10 +241,49 @@ body {
   margin: 20px auto;
 }
 
-#browser-address {
+.browser-address {
   display: flex;
   justify-content: flex-start;
   align-items: center;
+}
+
+/* Mail header container */
+.mail-header {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding: 10px;
+  background-color: #c0c0c0;
+  border-bottom: 2px solid #808080;
+}
+
+/* Label styling */
+.mail-header h5 {
+  margin: 0;
+  font-size: 14px;
+  font-weight: normal;
+  display: flex;
+  align-items: center;
+}
+
+/* Input container */
+.mail-input {
+  display: flex;
+  align-items: center;
+  background-color: #fff;
+  border: 2px inset #808080;
+  margin-left: 10px;
+  padding: 0 5px;
+  height: 24px;
+  width: 95%;
+}
+
+/* Input text */
+.mail-input h5 {
+  margin: 0;
+  font-size: 14px;
+  color: #000;
+  line-height: 24px;
 }
 .input-container {
   display: flex;
@@ -308,6 +370,18 @@ body {
   color: #000;
   text-align: left;
   margin: 0;
+}
+
+#notes-page h1 {
+  color: #000;
+  text-decoration: underline;
+}
+#notes-page {
+  min-height: 100vh;
+  color: #000;
+  margin: 20px;
+  padding: 40px;
+  background-color: #ffffff;
 }
 
 .internet-explorer-container {
