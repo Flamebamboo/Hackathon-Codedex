@@ -12,15 +12,21 @@
     />
   </head>
   <body>
+    <div class="scanlines-effect"></div>
     <div id="windowOS">
-      <div class="scanlines-effect"></div>
+      <div class="app-container">
+        <button onclick="triggerVirus()">
+          <img src="Images/Virus.png" alt="Windows 95" class="windows95" />
+        </button>
+        <h6>NotSonny.exe</h6>
+      </div>
       <div id="internet-explorer">
         <div class="internet-explorer-container">
           <div class="titleBar-text-blue">Internet Explorer.exe</div>
           <div class="windows-buttons-container">
-            <button onclick="triggerError()"></button>
-            <button onclick="triggerError()"></button>
-            <button onclick="triggerError()"></button>
+            <button class="win-button" onclick="triggerError()"></button>
+            <button class="win-button" onclick="triggerError()"></button>
+            <button class="win-button" onclick="triggerError()"></button>
           </div>
         </div>
         <div id="browser-address">
@@ -178,9 +184,7 @@
             /></svg
           ><span>Start</span>
         </button>
-        <div>
-          <h5>5:30 am</h5>
-        </div>
+        <div><h5 id="clock"></h5></div>
       </div>
     </div>
     <div id="windowsError" class="windows-error">

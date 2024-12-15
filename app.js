@@ -89,3 +89,21 @@ function toggleSelectors() {
   const demo = document.getElementById("selector-demo");
   demo.classList.toggle("highlight");
 }
+
+function getRealTime() {
+  const clock = document.getElementById("clock");
+  const date = new Date();
+  let hours = date.getHours();
+  const minutes = date.getMinutes().toString().padStart(2, "0");
+  const amORpm = hours >= 12 ? "PM" : "AM";
+
+  hours = hours % 12;
+  hours = hours ? hours : 12;
+  const stringTime = `${hours}:${minutes} ${amORpm}`;
+
+  clock.textContent = stringTime;
+}
+
+setInterval(getRealTime, 60000);
+
+getRealTime();

@@ -91,6 +91,28 @@ body {
   box-shadow: 1px 1px 0 0 #000;
 }
 
+.win-button {
+  background-color: #c0c0c0;
+  border-top: 1px solid #fff;
+  border-left: 1px solid #fff;
+  border-right: 2px solid #424242;
+  border-bottom: 2px solid #424242;
+  box-shadow: 1px 1px 0 0 #000;
+  height: 20px;
+  width: 20px;
+  cursor: pointer;
+}
+
+.win-button:active {
+  background-color: #c0c0c0;
+  border-right: 0.5px solid #424242;
+  border-bottom: 0.5px solid #424242;
+  box-shadow: 1px 1px 0 0 #000;
+  height: 20px;
+  width: 20px;
+  cursor: pointer;
+}
+
 .ok-button {
   display: flex;
   justify-content: center;
@@ -107,22 +129,59 @@ body {
   cursor: pointer;
 }
 .scanlines-effect {
-  position: fixed;
+  position: absolute;
   top: 0;
   left: 0;
-  right: 0;
-  bottom: 0;
-  background: linear-gradient(rgba(18, 16, 16, 0) 50%, rgba(0, 0, 0, 0.25) 50%);
-  background-size: 100% 4px;
-  z-index: 2;
+  width: 100%;
+  height: 100%;
   pointer-events: none;
+  background: repeating-linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 0.05),
+    rgba(0, 0, 0, 0.05) 1px,
+    transparent 1px,
+    transparent 5px
+  );
+  z-index: 100000;
 }
 
 #windowOS {
-  background: #008080;
+  background: #00807f;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
+}
+
+.app-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100px;
+  text-align: center;
+}
+
+.app-container button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+}
+
+.app-container img {
+  width: 72px;
+  height: 72px;
+}
+
+.app-container h6 {
+  font-size: 12px;
+  color: #000;
+  margin: 0;
+  padding: 0;
+}
+
+.app-container button:hover img {
+  filter: brightness(1.2);
 }
 #internet-explorer {
   position: absolute;
